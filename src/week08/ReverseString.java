@@ -5,6 +5,10 @@ public class ReverseString {
     public static void main(String[] args) {
 
         System.out.println(reversed("python"));
+        System.out.println("Selenium");
+
+        StringBuilder stb = new StringBuilder("Java SDET");
+        System.out.println(stb.reverse());
     }
 
         /*
