@@ -1,0 +1,137 @@
+
+Today's plan:
+10 AM - 1 PM - Java review
+2 - 5 PM  - Softskills review
+
+int num = 17;
+int[] nums = new int[5];
+nums[0] = 17;
+
+ArrayList<int> numsList = new ArrayList<>();//ERROR
+ArrayList<Integer> numsList = new ArrayList<>();
+
+wrapper class
+
+    object representation of primitive datatypes
+    Wrapper classes are defined in the java.lang package
+
+    We use wrapper classes to convert primitives to object
+
+    primitive -> Wrapper classes
+        byte -> Byte
+        short -> Short
+        int -> Integer
+        long -> Long
+        float -> Float
+        double -> Double
+        char -> Character
+        boolean -> Boolean
+
+Why do we need it?
+
+    1) ArrayList and other other collection types DO NOT WORK with primitive types
+        -> array objects work with both primitive and object types (non primitive)
+
+    2) Wrapper classes have useful methods & information
+        Ex: parse methods, MAX_VALUE
+
+How to make wrapper class object * no need to use the new keyword
+    className varName = value;
+
+Converting types * Both are automatic
+
+    Autoboxing: converts the primitive datatype to the wrapper class object
+
+    Unboxing: converts the wrapper class object to the primitive datatype
+
+What is the different between parse method and valueOf methods
+
+    parse methods return the primitive datatypes
+        Ex: parseInt(), parseDouble()
+
+    valueOf methods return the wrapper class objects
+        Ex: Integer.valueOf(), Double.valueOf(), String.valueOf()
+
+__________________________________________________________________
+
+ArrayList
+
+    ArrayList is a class. It is part of the collection framework (we will learn later)
+
+ArrayList vs Array
+
+    ArrayList:
+        - dynamic size
+        - allows manipulation of data with methods: adding, removing, checking for elements
+        - only object types
+
+    Array:
+        - takes less memory
+        - good for reading fixed sets of data
+        - works for both primitive and object types
+
+Arrays obj = new Arrays() -> not what you do
+Arrays.method(arr)
+int[] a = {12, 3};
+a.get() -> not what you do
+__________________________________________________________________
+
+Collections class
+
+    This class is a utility class for collections
+        located in the java.util package
+
+        https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html
+
+        ArrayList is a collection, so we can use these methods with ArrayList
+
+    Methods
+        Collections.sort(collection type): sort the given collection
+            void method
+
+        Collections.reverse(collection type): reverse the order of the elements in given collection
+            void method
+
+        Collections.max(collection type): returns the biggest elements in the collection
+            returns element datatype (Integer, Double, etc)
+
+        Collections.min(collection type): returns the smallest elements in the collection
+            returns element datatype (Integer, Double, etc)
+
+        Collections.swap(collection type, index1, index2): swap the elements in the collection based on the defined indices. The element in index1 is put into the index2 and vice versa
+            void method
+
+        Collections.frequency(collection, element): returns the number of times the given element is found in the collection
+            returns int
+__________________________________________________________________
+
+Bulk operations
+    the arguments of these methods are collection types
+
+    we use the method: Arrays.asList to get a collection type, or we can pass an ArrayList object
+
+    addAll (collection type): adds all the elements from the parameter list to our ArrayList
+
+    removeAll(collection type): removes every occurrence of every element from our parameter list
+
+    containsAll(collection type): checks if the ArrayList contains every element from the collection type parameter. returns boolean
+
+    retainAll(collection type): keep all matching elements from the argument. The rest are removed
+
+__________________________________________________________________
+
+removeIf(): method that can remove elements based on a lambda expression
+
+    removeIf( lambda )
+
+        basic lambda for this method (based on our current understanding)
+            variable -> boolean(using the variable)
+
+            -> the given boolean statement will be evaluated with each element. If the result is true the element will be removed
+__________________________________________________________________
+
+Math class
+
+    a class that defines methods related to mathematical operations
+
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Math.html
